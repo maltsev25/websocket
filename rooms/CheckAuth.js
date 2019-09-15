@@ -2,7 +2,11 @@ const rp = require('request-promise');
 const config = require('../config');
 
 module.exports = {
-
+    /**
+     * checking auth
+     * @param auth_token
+     * @returns {Promise<unknown>} checkAuth
+     */
     checkAuth:function(auth_token) {
         console.log('checkAuth request');
 

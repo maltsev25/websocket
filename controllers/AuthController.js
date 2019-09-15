@@ -4,7 +4,11 @@ const config = require('./../config');
 let memcached = new Memcached(config.getMemcachedServer());
 
 module.exports = {
-
+    /**
+     * check auth cache
+     * @param auth_token
+     * @returns {Promise<unknown>} authResult
+     */
     checkAuthCache:function(auth_token) {
 
         console.log('checkAuthCache');

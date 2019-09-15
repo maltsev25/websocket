@@ -24,6 +24,10 @@ function heartbeat() {
     this.isAlive = true;
 }
 
+/**
+ * remove client
+ * @param ws
+ */
 function removeClient(ws) {
     let index = CLIENTS.indexOf(ws);
     console.log('соединение ' + index + ' закрыто ' + ws._socket.remoteAddress + ":" + ws._socket.remotePort);
@@ -32,6 +36,11 @@ function removeClient(ws) {
     }
 }
 
+/**
+ * set client data (auth_token, rooms)
+ * @param ws
+ * @param data
+ */
 function setDataClient(ws, data) {
     let index = CLIENTS.indexOf(ws);
     if(index > -1) {
@@ -39,6 +48,10 @@ function setDataClient(ws, data) {
     }
 }
 
+/**
+ * ping-pong
+ * @type {number}
+ */
 const pingPong = setInterval(function ping() {
     CLIENTS.forEach(function each(ws) {
         if (ws.isAlive === false) {

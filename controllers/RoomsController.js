@@ -4,7 +4,10 @@ const CallStatisticForMonitor = require('./../rooms/CallStatisticForMonitor');
 const CallQueueForMonitor = require('./../rooms/CallQueueForMonitor');
 
 module.exports = {
-
+    /**
+     * run rooms for CLIENTS
+     * @param CLIENTS
+     */
     run: function (CLIENTS) {
 
         let getAgentsForMonitor= setInterval(function check() {
