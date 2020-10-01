@@ -1,0 +1,13 @@
+{
+  "apps": [
+    {
+      "name": "WebSocket",
+      "script": "./dist/socket.js",
+      "watch": ["dist",".env","sslcert"],
+      "instances": "1",
+      "exec_mode": "fork",
+      "out_file": "/dev/null",
+      "error_file": "/dev/null"
+    }
+  ]
+}

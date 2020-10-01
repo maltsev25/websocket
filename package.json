@@ -1,23 +1,33 @@
 {
-  "name": "websocket",
-  "version": "1.0.0",
-  "description": "WebSocket",
-  "main": "index.js",
-  "dependencies": {
-    "forever": "^1.0.0",
-    "memcached": "^2.2.2",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4",
-    "ws": "^7.1.0"
-  },
-  "devDependencies": {},
+  "name": "wsts",
+  "version": "1.0.3",
+  "main": "socket.js",
   "scripts": {
-    "test": "test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon --exec ts-node src/socket.ts",
+    "prod": "node ./dist/socket.js",
+    "compile": "tsc",
+    "start": "tsc && pm2 start pm2.json"
   },
-  "keywords": [
-    "websocket",
-    "ws"
-  ],
-  "author": "maltsev",
-  "license": "ISC"
+  "keywords": [],
+  "author": "maltsev.ga",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/redis": "^2.8.22",
+    "@types/node": "^14.0.11",
+    "@types/request-promise": "^4.1.46",
+    "@types/ws": "^7.2.5",
+    "nodemon": "^2.0.4",
+    "ts-node": " 8.10.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "elastic-apm-node": "^3.6.1",
+    "redis": "^3.0.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "typescript": "^3.9.5",
+    "ws": "^7.3.0"
+  }
 }
