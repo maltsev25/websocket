@@ -28,6 +28,6 @@
     "request": "^2.88.2",
     "request-promise": "^4.2.5",
     "typescript": "^3.9.5",
-    "ws": "^7.3.0"
+    "ws": "^7.4.6"
   }
 }
